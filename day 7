@@ -1,4 +1,4 @@
-public class PrintArray {
+public class SumOfArrayElements {
     public static void main(String[] args) {
         int[] array = { 2, 4, 6, 8 };
         int sum = 0;
