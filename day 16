@@ -1,0 +1,7 @@
+public class ReverseString {
+    public static void main(String[] args) {
+        String string = "30 days of code";
+        StringBuilder reversed = new StringBuilder(string).reverse();
+        System.out.println("Reversed string: " + reversed.toString());
+    }
+}
