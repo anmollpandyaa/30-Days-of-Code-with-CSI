@@ -1,0 +1,26 @@
+public class FirstNonRepeatingCharacter {
+    public static int firstNonRepeatingIndex(String s) {
+        int[] charCount = new int[256];
+
+        for (char c : s.toCharArray()) {
+            charCount[c]++;
+        }
+
+        for (int i = 0; i < s.length(); i++) {
+            if (charCount[s.charAt(i)] == 1) {
+                return i; // Return the index of the first non-repeating character
+            }
+        }
+        return -1;
+    }
+
+    public static void main(String[] args) {
+        String input = "code";
+        int index = firstNonRepeatingIndex(input);
+        if (index != -1) {
+            System.out.println("The first non-repeating character in \"" + input + "\" is at index: " + index);
+        } else {
+            System.out.println("No non-repeating character found in the string \"" + input + "\"");
+        }
+    }
+}
