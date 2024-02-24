@@ -1,0 +1,19 @@
+public class Palindrome {
+    public static boolean isPalindrome(String str) {
+        if (str.length() == 0 || str.length() == 1) {
+            return true;
+        }
+        if (str.charAt(0) == str.charAt(str.length() - 1)) {
+            return isPalindrome(str.substring(1, str.length() - 1));
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
+        String test1 = "code";
+        String test2 = "racecar";
+
+        System.out.println(test1 + " is a palindrome: " + isPalindrome(test1));
+        System.out.println(test2 + " is a palindrome: " + isPalindrome(test2));
+    }
+}
