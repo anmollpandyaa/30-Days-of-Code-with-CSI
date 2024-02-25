@@ -3,12 +3,12 @@ public class SumOfArrayElements {
         if (index == arr.length) {
             return 0;
         }
-        return arr[index] + arraySum(arr, index + 1);
+        return arr[index] + sumOfArrayElements(arr, index + 1);
     }
 
     public static void main(String[] args) {
         int[] array = {2, 4, 6, 8};
-        int sum = arraySum(array, 0);
+        int sum = sumOfArrayElements(array, 0);
         System.out.println("Sum of elements in the array: " + sum);
     }
 }
