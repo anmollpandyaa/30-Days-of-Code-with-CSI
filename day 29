@@ -1,0 +1,26 @@
+public class ValidParentheses {
+    public static boolean isValid(String s) {
+        if (s == null || s.length() == 0)
+            return true;
+        
+        int balance = 0;
+        
+        for (char c : s.toCharArray()) {
+            if (c == '(') {
+                balance++;
+            } else if (c == ')') {
+                balance--;
+                // If balance becomes negative, it means there's a closing parenthesis without an opening one
+                if (balance < 0)
+                    return false;
+            }
+        }
+        
+        return balance == 0;
+    }
+
+    public static void main(String[] args) {
+        String parentheses = "{[()]}";
+        System.out.println("The given string of parentheses is valid: " + isValid(parentheses));
+    }
+}
