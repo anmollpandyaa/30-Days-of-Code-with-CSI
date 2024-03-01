@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class FarewellProgram {
+
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Greetings!\n Enter your name: ");
+		String name = scanner.next();
+		
+		System.out.println("How was your experience during 30 days of code? Please share your thoughts.");
+		String feedback = scanner.next();
+		System.out.println(name + ", Thank you so much for sharing your experience of 30 days of code. We are so happy to hear your valuable feedback.\nWe wish you luck for your future coding journey. Keep coding, keep growing.");
+		scanner.close();
+	}
+}
